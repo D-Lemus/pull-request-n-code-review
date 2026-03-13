@@ -28,6 +28,17 @@ def guess_card(my_deck):
     input("Press Enter when you have thought of a card")
     guessed_card = random.choice(my_deck)
     print(f"I guess you are thinking of: {guessed_card}")
+    
+    while True:
+        answer = input("Was this your card? (yes/no): ").strip().lower()
+        if answer == "yes":
+            print("Easy...")
+            break
+        elif answer == "no":
+            print("Hmm.. Youre lying!")
+            break
+        else:
+            print("Please answer 'yes' or 'no'.") 
 
 
 def the_magitian():
