@@ -1,6 +1,6 @@
 import random
 
-def TheMagitian():
+def the_magitian():
     card_deck = [0] * 52
 
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
@@ -8,28 +8,28 @@ def TheMagitian():
 
     for i in range(52):
         suit = suits[i // 13]
-        rankCard = ranks[i % 13]
-        card_deck[i] = f"{rankCard} of {suit}"
+        rank_card = ranks[i % 13]
+        card_deck[i] = f"{rank_card} of {suit}"
 
     random.shuffle(card_deck)
 
-    myDeck = []
-    while len(myDeck) < 3:
+    my_deck = []
+    while len(my_deck) < 3:
         input("Press Enter to draw a card")
-        randomCardChoice = random.choice(card_deck)
-        print(f"You drew: {randomCardChoice}")
-        myDeck.append(randomCardChoice)
+        random_card_choice = random.choice(card_deck)
+        print(f"You drew: {random_card_choice}")
+        my_deck.append(random_card_choice)
 
     print("Your hand of cards:")
-    for card in myDeck:
+    for card in my_deck:
         print(card)
 
     print("Think of a card from your hand and I will guess it.")
     input("Press Enter when you have thought of a card")
-    guessedCardbyMagitian = random.choice(myDeck)
-    print(f"I guess you are thinking of: {guessedCardbyMagitian}")
+    guessed_card = random.choice(my_deck)
+    print(f"I guess you are thinking of: {guessed_card}")
 
 if __name__ == "__main__":
-    TheMagitian()
+    the_magitian()
 
 
