@@ -1,5 +1,8 @@
 import random
 
+CARDS_IN_HAND = 3
+DECK_SIZE = 52
+
 def build_card_deck() -> list:
     """
     Builds and shuffles a standard 52-card deck.
@@ -37,9 +40,10 @@ def draw_cards(card_deck: list) -> list:
         A list of 3 strings representing the drawn cards.
     """
     my_deck = []
-    while len(my_deck) < 3:
+    while len(my_deck) < CARDS_IN_HAND:
         input("Press Enter to draw a card")
         random_card_choice = random.choice(card_deck)
+        card_deck.remove(random_card_choice)
         print(f"You drew: {random_card_choice}")
         my_deck.append(random_card_choice)
 
