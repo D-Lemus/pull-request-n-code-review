@@ -31,6 +31,7 @@ def guess_card(my_deck):
 
 
 def the_magitian():
+    print("WELCOME TO MAGORIUM'S WONDER EMPORIUM CARD GAME")
     print("Think of a card from your hand and I will guess it.")
     card_deck = build_card_deck()
     my_deck = draw_cards(card_deck)
