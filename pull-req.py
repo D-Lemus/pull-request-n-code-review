@@ -1,6 +1,6 @@
 import random
 
-def build_card_deck():
+def build_card_deck() -> list:
     card_deck = [0] * 52
 
     suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
@@ -14,7 +14,7 @@ def build_card_deck():
     random.shuffle(card_deck)
     return card_deck
 
-def draw_cards(card_deck):
+def draw_cards(card_deck: list) -> list:
     my_deck = []
     while len(my_deck) < 3:
         input("Press Enter to draw a card")
@@ -24,7 +24,7 @@ def draw_cards(card_deck):
 
     return my_deck
 
-def guess_card(my_deck):
+def guess_card(my_deck: list) -> None:
     input("Press Enter when you have thought of a card")
     guessed_card = random.choice(my_deck)
     print(f"I guess you are thinking of: {guessed_card}")
@@ -41,7 +41,7 @@ def guess_card(my_deck):
             print("Please answer 'yes' or 'no'.") 
 
 
-def the_magitian():
+def the_magitian() -> None:
     print("WELCOME TO MAGORIUM'S WONDER EMPORIUM CARD GAME")
     print("Think of a card from your hand and I will guess it.")
     card_deck = build_card_deck()
