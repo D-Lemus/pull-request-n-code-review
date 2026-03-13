@@ -98,6 +98,9 @@ def the_magitian() -> None:
 
 
 if __name__ == "__main__":
-    the_magitian()
-
+    while True:
+        the_magitian()
+        again = input("Play again? (yes/no): ").strip().lower()
+        if again != "yes":
+            break
 
