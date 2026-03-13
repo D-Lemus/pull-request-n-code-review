@@ -8,8 +8,8 @@ def TheMagitian():
 
     for i in range(52):
         suit = suits[i // 13]
-        rank = ranks[i % 13]
-        card_deck[i] = f"{rank} of {suit}"
+        rankCard = ranks[i % 13]
+        card_deck[i] = f"{rankCard} of {suit}"
 
     random.shuffle(card_deck)
 
